@@ -3,10 +3,10 @@ package ru.mks.project;
 import java.util.Arrays;
 import java.util.List;
 
-public class LionAlex extends Lion {
+public class Alex extends Lion {
     List<String> friends;
 
-    public LionAlex(Feline feline) throws Exception {
+    public Alex(Feline feline) throws Exception {
         super("Самец", feline);
     }
 

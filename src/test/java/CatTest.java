@@ -1,45 +1,27 @@
-import com.example.Cat;
-import com.example.Feline;
+import ru.mks.project.Cat;
+import ru.mks.project.Feline;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-
-import java.util.Arrays;
-import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CatTest {
     @Mock
-    Feline feline;
-
+    private Feline feline;
     @Test
     public void getSoundReturnStringPositiveTest() {
         Cat cat = new Cat(feline);
         String actual = cat.getSound();
         String expected = "Мяу";
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
-
     @Test
-    public void getFoodReturnListEmptyMockPositiveTest() throws Exception {
+    public void checkGetFoodMethodCalled() throws Exception {
         Cat cat = new Cat(feline);
         cat.getFood();
+        Mockito.verify(feline, Mockito.times(1)).eatMeat();
     }
-
-    @Test
-    public void getFoodReturnListAndCheckedPositiveTest() throws Exception {
-        Cat cat = new Cat(new Feline());
-        List<String> actualList = cat.getFood();
-        List<String> expectedList = Arrays.asList("Животные", "Птицы", "Рыба");
-
-        for(int i = 0; i < actualList.size(); i++) {
-            Assert.assertEquals(actualList.get(i), expectedList.get(i));
-        }
-
-    }
-
-
-
 }

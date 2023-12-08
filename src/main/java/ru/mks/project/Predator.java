@@ -1,4 +1,4 @@
-package com.example;
+package ru.mks.project;
 
 import java.util.List;
 

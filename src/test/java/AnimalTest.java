@@ -1,4 +1,4 @@
-import com.example.Animal;
+import ru.mks.project.Animal;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

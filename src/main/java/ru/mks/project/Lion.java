@@ -1,4 +1,4 @@
-package com.example;
+package ru.mks.project;
 
 import java.util.List;
 
@@ -18,6 +18,10 @@ public class Lion {
             throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
     }
+
+    public Lion(Feline feline, String самец) {
+    }
+
 
     public int getKittens() {
         return feline.getKittens();
