@@ -13,7 +13,7 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
-public class LionAlexTest {
+public class LionLionAlexTest {
     private final int noKittensLionAlex = 0;
     @Spy
     Feline feline = new Feline();

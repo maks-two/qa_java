@@ -1,12 +1,12 @@
-package com.example;
+package ru.mks.project;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class Alex extends Lion {
+public class LionAlex extends Lion {
     List<String> friends;
 
-    public Alex(Feline feline) throws Exception {
+    public LionAlex(Feline feline) throws Exception {
         super("Самец", feline);
     }
 
